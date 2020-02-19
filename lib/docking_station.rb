@@ -6,7 +6,7 @@ class DockingStation
   end
 
   def capacity
-    1
+    20
   end
   attr_reader :bikes
   def dock(bike)

@@ -17,7 +17,7 @@ describe DockingStation do
   end
   describe '#dock' do
     it 'raises an error when full' do
-      subject.dock(Array.new(subject.capacity) { Bike.new })
+      subject.capacity.times { subject.dock(Bike.new) }
       expect { subject.dock(Bike.new) }.to(raise_exception('Dock is full'))
     end
   end
